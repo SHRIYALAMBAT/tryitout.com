@@ -2,10 +2,13 @@ import { Search, ShoppingCart } from '@material-ui/icons';
 import { Badge } from '@material-ui/core';
 import React from 'react'
 import styled from 'styled-components'
+import { Form, FormControl, Button } from "react-bootstrap";
+import Img from '../Images/tryitouttranslogo.png'
 
 
 const Container = styled.div`
     height: 60px;
+    background-color: #b3d9ff;
     
 `;
 const Wrapper = styled.div`
@@ -62,15 +65,22 @@ const Navbar = () => {
         <Container>
             <Wrapper>
                 <Left>
-                    <Language>
-                        EN
-                    </Language>
-                    <SearchContainer>
-                        <Input/>
-                        <Search style={{color:"gray", fontSize:16}}/>
-                        </SearchContainer>
+                <img style={{ width: "54px" , margin: "2px" }} src={Img}></img>
+                <Logo>TryItOut</Logo>
+                    
                 </Left>
-                <Center><Logo>TryItOut</Logo></Center>
+                <Center>
+                        
+                <Form className="d-flex" style={{width:500}}>
+        <FormControl
+          type="search"
+          placeholder="Search"
+          className="me-2"
+          aria-label="Search"
+        />
+        <Button variant="outline-dark">Search</Button>
+      </Form>
+</Center>
                 <Right>
                 
                     <MenuItem>SIGN IN</MenuItem>
